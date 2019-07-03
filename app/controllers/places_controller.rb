@@ -1,6 +1,6 @@
 class PlacesController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
-
+  before_action :authenticate_user!, only: [:new, :create, :show, :edit, :update, :destroy]
+### I added show here and that made the show page appear
   def index
     @places = Place.all
   end
@@ -22,7 +22,7 @@ class PlacesController < ApplicationController
     @place = Place.find(params[:id])
   end
 
-	def edit
+ 	def edit
 	  @place = Place.find(params[:id])
 
 	  if @place.user != current_user
