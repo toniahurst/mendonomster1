@@ -22,7 +22,7 @@ class PlacesController < ApplicationController
     @place = Place.find(params[:id])
   end
 
- 	def edit
+	def edit
 	  @place = Place.find(params[:id])
 
 	  if @place.user != current_user
@@ -45,15 +45,15 @@ class PlacesController < ApplicationController
 	  end
 	end
 
-	def destroy
-	  @place = Place.find(params[:id])
-	  if @place.user != current_user
-	    return render plain: 'Not Allowed', status: :forbidden
-	  end
+def destroy
+  @place = Place.find(params[:id])
+  if @place.user != current_user
+    return render plain: 'Not Allowed', status: :forbidden
+  end
 
-	  @place.destroy
-	  redirect_to root_path
-	end
+  @place.destroy
+  redirect_to root_path
+end
   
   private
 
