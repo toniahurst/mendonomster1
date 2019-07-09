@@ -1,0 +1,2 @@
+Place.create(name: 'Pizza Nomster', address: '2 Main street, Cambridge, MA 02139', description: 'Best Pizza in Cambridge. Their Crust is to die for!')
+Place.create(name: 'Area 4', address: '112 Main Street, Cambridge, MA 02139', description: 'One of the best Pizza places. Their Mushroom pizza is unsurpassed!')

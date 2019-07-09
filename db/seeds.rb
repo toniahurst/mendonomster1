@@ -1,2 +1,7 @@
-Place.create(name: 'Pizza Nomster', address: '2 Main street, Cambridge, MA 02139', description: 'Best Pizza in Cambridge. Their Crust is to die for!')
-Place.create(name: 'Area 4', address: '112 Main Street, Cambridge, MA 02139', description: 'One of the best Pizza places. Their Mushroom pizza is unsurpassed!')
+# This file should contain all the record creation needed to seed the database with its default values.
+# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
+#
+# Examples:
+#
+#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
+#   Character.create(name: 'Luke', movie: movies.first)
