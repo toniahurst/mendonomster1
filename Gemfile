@@ -58,8 +58,6 @@ group :test do
   gem 'chromedriver-helper'
 end
 
-gem 'jquery-rails'
-
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'
@@ -76,3 +74,4 @@ gem 'devise'
 gem 'geocoder'
 gem 'figaro'
 gem 'carrierwave', '~> 1.0'
+gem 'fog-aws'

@@ -1,0 +1,21 @@
+<div class="col-10 offset-1">
+  <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
+    <%= f.input :caption %>
+    <%= f.submit "Add a Photo", class: 'btn btn-primary' %>
+    <%= f.input :picture %>
+
+  <% end %>
+</div>
+
+<h2>Photos</h2>
+
+<div class="row">
+  <% @place.photos.each do |comment| %>
+    <div class="col-12 col-sm-6" style="padding-top:30px;">
+    
+      <%= image_tag 'Rueben.jpg', class: 'img-fluid' %>
+      <%= @photo.caption %><br />
+  <% end %>
+</div>
+
+
