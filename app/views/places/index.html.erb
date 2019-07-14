@@ -1,3 +1,5 @@
+
+
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -8,25 +10,25 @@
     <div class="carousel-item active">
       <%= image_tag 'slider1.jpg', class: 'img-fluid' %>
       <div class="carousel-caption d-none d-md-block">
-      <h3>Sharing a cheese plate at Pennroyal Farms</h3>
+      <h3>Locally sourced ingredients</h3>
     </div>
   </div>
     <div class="carousel-item">
       <%= image_tag 'slider2.jpg', class: 'img-fluid' %>
       <div class="carousel-caption d-none d-md-block">
-        <h3>Flow Cafe on Main Street</h3>
+        <h3>Breathtaking views</h3>
     </div>
   </div>
     <div class="carousel-item">
       <%= image_tag 'slider3.jpg', class: 'img-fluid' %>
       <div class="carousel-caption d-none d-md-block">
-        <h3>Mendocino County is a paradise for lovers of great food and wine</h3>
+        <h3>Mendocino County is a mecca for lovers of great food and wine</h3>
       </div>
     </div>
     <div class="carousel-item">
       <%= image_tag 'slider4.jpg', class: 'img-fluid' %>
       <div class="carousel-caption d-none d-md-block">
-        <h3>Harbor House Inn sources all ingredients locally</h3>
+        <h3>Nationally recognized cuisine</h3>
       </div>
     </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -38,7 +40,11 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-
+<% "Places" %>
+<div id="places">
+  <%= render @places %>
+</div>
+<p><%= link_to "New Place", new_place_path %></p>
 
 
 <% @places.each do |place| %>
@@ -46,6 +52,7 @@
     <h1><%= link_to place.name, place_path(place) %></h1><br />
     <i><%= place.address %></i><br />
     <p><%= place.description %></p><br />
+
 
     <% if place.user.present? %>
       <small><%= place.user.email %></small>
@@ -58,7 +65,8 @@
         <% end %>
         <%= place.comments.last.message %>
         <small><%= place.comments.last.user.email %></small>
-      </blockquote>
+      </blockquote>   
+      </div>
     </div>
     <% end %>
   </div>
