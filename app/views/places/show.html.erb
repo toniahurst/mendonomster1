@@ -7,25 +7,20 @@
   <% if @place.latitude.present? && @place.longitude.present? %>
 
   <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-    }
     #map {
-      height: 100%;
-    }
+    height: 300px;
+  }
   </style>
-  </head>
-  <body>
-  <div id="map"></div>
+  
+  <% if @place.latitude.present? && @place.longitude.present? %>
+
   <script>
 
     function initMap() {
-      var myLatLng = {lat: -25.363, lng: 131.044};
+      var myLatLng = {lat: <%= @place.latitude %>, lng: <%= @place.longitude %>};
 
       var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 4,
+        zoom: 12,
         center: myLatLng
       });
 
@@ -39,11 +34,11 @@
 
 
   <script async defer
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAezosexTGyM0vEMYhAxWvzwvm2QVoKlE&callback=initMap">
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBah079hUirHMWEB4Hb2eMD9RGu3Q6P5OA&callback=initMap">
   </script>
 
  	<div id="map"></div>
- 	<% end %>
+<% end %>
 
  	<br />
 
@@ -153,5 +148,5 @@
       <%= @photo.caption %><br />
   <% end %>
 </div>
-
+<% end %>
 
