@@ -14,21 +14,22 @@
     <div class="carousel-item">
       <%= image_tag 'slider2.jpg', class: 'img-fluid' %>
       <div class="carousel-caption d-none d-md-block">
-        <h3>Breathtaking views</h3>
+        <h3>A variety of cuisine and fine dining options</h3>
     </div>
   </div>
+  <div class="carousel-item">
+      <%= image_tag 'slider4.jpg', class: 'img-fluid' %>
+      <div class="carousel-caption d-none d-md-block">
+        <h3>Breathtaking views</h3>
+      </div>
+    </div>
     <div class="carousel-item">
       <%= image_tag 'slider3.jpg', class: 'img-fluid' %>
       <div class="carousel-caption d-none d-md-block">
-        <h3>Mendocino County is a mecca for lovers of great food and wine</h3>
+        <h3>Mendocino County is a haven for lovers of great food and wine</h3>
       </div>
     </div>
-    <div class="carousel-item">
-      <%= image_tag 'slider4.jpg', class: 'img-fluid' %>
-      <div class="carousel-caption d-none d-md-block">
-        <h3>Nationally recognized cuisine</h3>
-      </div>
-    </div>
+    
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
@@ -51,8 +52,7 @@
       <small><%= place.user.email %></small>
     <% end %>
 </div>
-
-<% if place.comments.present? %>
+ <% if place.comments.present? %>
   <div class="col-12">
     <blockquote>
       <% if place.comments.last.humanized_rating.present? %>
@@ -63,15 +63,4 @@
     </blockquote>
   </div>
 <% end %>
-
-<% if place.photos.present? %>
-  <div class="col-12">
-    <blockquote>
-      <%= image_tag photos.first.picture.url %>
-      <% end %>
-      <br />
-    </blockquote>
-  </div>
-</div>
-
 <% end %>
