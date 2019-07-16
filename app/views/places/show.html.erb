@@ -83,7 +83,7 @@
 </div>
 
 <div class="col-12 col-sm-6">
-<h1 class="float-left">Comments</h1>
+<h1 class="float-left">Comments</h1><br /><br />
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
   Add a comment
@@ -133,7 +133,7 @@
 </div>
 
 <div class="col-12 col-sm-6">
-<h1 class="float-center">Photos</h1>
+<h1 class="float-left">Photos</h1><br /><br />
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myPhotoModal">
   Add a photo
@@ -144,14 +144,10 @@
 <div class="row">
 <% @place.photos.each do |photo| %>
   <div class="col-12 col-sm-6">
-    <div class="pixbox">
     <% if photo.picture.present? %>
-    
       <%= image_tag photo.picture.url %>
     <% end %>  
-  </div>
   <b><%= photo.caption %></b> 
-
   </div>
   <% end %>
 </div>
