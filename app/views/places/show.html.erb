@@ -75,6 +75,7 @@
       </div>  
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <br />
         <%= f.submit "Add a Comment", class: 'btn btn-primary' %>
       </div>
     <% end %>
@@ -82,7 +83,7 @@
   </div>
 </div>
 
-<div class="col-10 offset-1">
+<div class="col-12 col-sm-6">
 <h1 class="float-left">Comments</h1>
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
@@ -130,10 +131,10 @@
       <% end %>
     </div>
   </div>
-</div>>
+</div>
 
-<div class="col-10 offset-1">
-<h1 class="float-left">Photos</h1>
+<div class="col-12 col-sm-6">
+<h1 class="float-center">Photos</h1>
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myPhotoModal">
   Add a photo
@@ -145,41 +146,13 @@
 <% @place.photos.each do |photo| %>
   <div class="col-12 col-sm-6">
     <% if photo.picture.present? %>
+  
       <%= image_tag photo.picture.url %>
     <% end %>  
   <b><%= photo.caption %></b> 
+
   </div>
   <% end %>
 </div>
 <% end %>
-
-<div class="clear"></div>
-<br /><br />
-<h2 class="text-center">My Places</h2>
-<br /><br />
-
-<% @user.places.each do |place| %>
-  <div class="booyah-box col-10 offset-1">
-    <h1><%= link_to place.name, place_path(place) %></h1><br />
-    <i><%= place.address %></i><br />
-    <p><%= place.description %></p><br />
-
-    <% if place.user.present? %>
-      <small><%= place.user.email %></small>
-    <% end %>
-
-    <% if place.comments.present? %>
-      <div class="col-12">
-        <blockquote>
-          <% if place.comments.last.humanized_rating.present? %>
-            <b><%= place.comments.last.humanized_rating %></b> -
-          <% end %>
-          <%= place.comments.last.message %>
-          <small><%= place.comments.last.user.email %></small>
-        </blockquote>
-      </div>
-    <% end %>
-  </div>
-<% end %>
-
 

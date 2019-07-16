@@ -53,7 +53,7 @@
     <% end %>
 </div>
  <% if place.comments.present? %>
-  <div class="col-12">
+  <div class="col-10 offset-1">
     <blockquote>
       <% if place.comments.last.humanized_rating.present? %>
         <b><%= place.comments.last.humanized_rating %></b> -
@@ -65,10 +65,10 @@
 <% end %>
 
 <% if place.photos.present? %>
-  <div class="col-12">
-    <blockquote>
+  <div class="col-10 offset-1">
+   
     <%= image_tag place.photos.first.picture.url %>
     <% end %>  
-    </blockquote>
+  
   </div>
 <% end %>
