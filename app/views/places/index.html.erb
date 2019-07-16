@@ -52,6 +52,7 @@
       <small><%= place.user.email %></small>
     <% end %>
 </div>
+
  <% if place.comments.present? %>
   <div class="col-10 offset-1">
     <blockquote>
@@ -66,9 +67,9 @@
 
 <% if place.photos.present? %>
   <div class="col-10 offset-1">
-   
+   <blockquote>
     <%= image_tag place.photos.first.picture.url %>
     <% end %>  
-  
+  </blockquote>
   </div>
 <% end %>
