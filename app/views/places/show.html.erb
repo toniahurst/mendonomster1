@@ -144,10 +144,12 @@
 <div class="row">
 <% @place.photos.each do |photo| %>
   <div class="col-12 col-sm-6">
+    <div class="pixbox">
     <% if photo.picture.present? %>
     
       <%= image_tag photo.picture.url %>
     <% end %>  
+  </div>
   <b><%= photo.caption %></b> 
 
   </div>
