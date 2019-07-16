@@ -35,7 +35,7 @@
       }
     </script>
     <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBah079hUirHMWEB4Hb2eMD9RGu3Q6P5OA&callback=initMap">
+    src=<%="https://maps.googleapis.com/maps/api/js?key=#{ENV['GEOCODER_API_KEY']}&callback=initMap"%>>
     </script>
 
  	  <div id="map"></div>
